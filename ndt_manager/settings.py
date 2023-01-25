@@ -11,7 +11,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY',)
 
 DEBUG = bool(os.environ.get('DEBUG', False))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/']
 X_FRAME_OPTIONS = '*'
 
 # Application definition
@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'ndt_manager.apps.NDTManagerConfig',
+    'equipment.apps.EquipmentConfig',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -91,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -111,3 +113,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# print SQL queries in shell_plus
+if DEBUG:
+    INSTALLED_APPS.insert(0, 'django_extensions')
+    SHELL_PLUS_PRINT_SQL = True

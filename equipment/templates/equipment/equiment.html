@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+</div>
+
+<a class="nav-link" href="{% url 'task_create' %}">{% trans 'Create task' %}</a>
+
+<div class="card mb-3">
+    <div class="card-body bg-light">
+        <h3>{% trans 'Task search' %}</h3>
+        <form method="get" class="form-check">
+            {% bootstrap_form filter.form %}
+            <button submit="{{ btn_show }}" class="btn btn-info">
+                {{ btn_show }}
+            </button>
+        </form>
+    </div>
+</div>
+
+<br>
+<table class="table">
+    <caption>{% trans 'Tasks' %}</caption>
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Status' %}</th>
+        <th scope="col">{% trans 'Author' %}</th>
+        <th scope="col">{% trans 'Executor' %}</th>
+        <th scope="col">{% trans 'Created date' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for task in tasks %}
+    <tr>
+        <th scope="row">{{ task.pk }}</th>
+        <td><a href="/tasks/{{ task.pk }}">{{ task.name }}</a></td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.author }}</td>
+        <td>{{ task.executor }}</td>
+        <td>{{ task.created_date }}</td>
+        <td>
+            <a href="/tasks/{{ task.pk }}/update/">{{ btn_update }}</a>
+            <br>
+            <a href="/tasks/{{ task.pk }}/delete/">{{ btn_delete }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

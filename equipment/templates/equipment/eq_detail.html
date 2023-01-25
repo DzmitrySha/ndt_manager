@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+<h1 class="my-4">{% trans 'Equipment detail view' %}</h1>
+
+<div class="card">
+  <div class="card-header bg-info text-white">
+    <h2>{{ equipment.name }}</h2>
+  </div>
+  <div class="card-body bg-light">
+    <p>{{ equipment.pk }}</p>
+    <hr>
+    <div class="container">
+      <div class="row p-2">
+        <div class="col">{% trans 'Factory number' %}</div>
+        <div class="col">{{ equipment.factory_num }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Inventory number' %}</div>
+        <div class="col">{{ equipment.inventory_num }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Registration number' %}</div>
+        <div class="col">{{ equipment.registr_num }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Created date' %}</div>
+        <div class="col">{{ equipment.created_date }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Description' %}</div>
+        <div class="col">{{ equipment.description }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">
+          <a href="/equipments/{{ equipment.id }}/update/">{% trans 'Update' %}</a>
+          <br>
+          <a href="/equipments/{{ equipment.id }}/delete/">{% trans 'Delete' %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

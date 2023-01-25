@@ -13,14 +13,14 @@ class Equipment(models.Model):
                                         auto_now=True)
     # equipment_type = models.ForeignKey(...)
     
-    factory_num = models.IntegerField(verbose_name=_('Factory number'), blank=True)
-    inventory_num = models.IntegerField(verbose_name=_('Inventory number'), blank=True)
-    registr_num = models.IntegerField(verbose_name=_('Registration number'), blank=True)
+    factory_num = models.CharField(verbose_name=_('Factory number'), max_length=20, blank=True)
+    inventory_num = models.CharField(verbose_name=_('Inventory number'), max_length=20, blank=True)
+    registr_num = models.CharField(verbose_name=_('Registration number'), max_length=20, blank=True)
     
-    start_op_date = models.DateTimeField(verbose_name=_("Start operation date"))
+    start_op_date = models.DateTimeField(verbose_name=_("Start operation date"), default=timezone.now, blank=True)
     op_time = models.IntegerField(verbose_name=_('Total operation time'), blank=True)
     
-    last_repair_date = models.DateTimeField(verbose_name=_("Last repair date"))
+    last_repair_date = models.DateTimeField(verbose_name=_("Last repair date"), default=timezone.now, blank=True)
     op_time_after_repairs = models.IntegerField(verbose_name=_('Operation time after major repairs'), blank=True)
     
     # executor = models.ForeignKey(
