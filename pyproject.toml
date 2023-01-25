@@ -15,4 +15,5 @@ python-dotenv = "^0.21.1"
 django-bootstrap4 = "^22.3"
 django-filter = "^22.1"
 django-extensions = "^3.2.1"
+dj-database-url = "^1.2.0"
 [tool.poetry.dev-dependencies]
