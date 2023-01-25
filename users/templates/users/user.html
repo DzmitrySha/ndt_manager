@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+<h1 class="my-4">{% trans 'User' %}</h1>
+
+<div class="card">
+  <div class="card-header bg-info text-white">
+    <h2>{{ user.username }}</h2>
+  </div>
+  <div class="card-body bg-light">
+    <p>{{ user.pk }}</p>
+    <hr>
+    <div class="container">
+      <div class="row p-2">
+        <div class="col">{% trans 'Full name' %}</div>
+        <div class="col">{{ user.first_name }} {{ user.last_name }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Email' %}</div>
+        <div class="col">{{ user.email }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Date joined' %}</div>
+        <div class="col">{{ user.date_joined }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Last login' %}</div>
+        <div class="col">{{ user.last_login }}</div>
+      </div>
+
+      <div class="row p-2">
+        <div class="col">
+          <a href="/users/{{ user.pk }}/update/">{% trans 'Update' %}</a>
+          <br>
+          <a href="/users/{{ user.pk }}/delete/">{% trans 'Delete' %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

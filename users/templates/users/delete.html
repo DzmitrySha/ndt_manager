@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <p>{% trans 'Are you sure want to delete' %} "{{ user }}"?</p>
+        {% bootstrap_form form %}
+
+        <input class="btn btn-danger btn-lg" type="submit" value="Да, удалить">
+    </form>
+
+</div>
+{% endblock %}
