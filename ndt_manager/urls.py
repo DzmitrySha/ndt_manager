@@ -1,0 +1,10 @@
+from django.contrib import admin
+from django.urls import path
+from ndt_manager import settings
+from ndt_manager.views import IndexView
+
+
+urlpatterns = [
+    path('', IndexView.as_view(), name="home"),
+    path('admin/', admin.site.urls),
+]
