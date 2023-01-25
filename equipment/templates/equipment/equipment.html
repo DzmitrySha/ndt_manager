@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+</div>
+
+<a class="nav-link" href="{% url 'equipment_create' %}">{% trans 'Create equipment' %}</a>
+
+
+<table class="table">
+    <caption>{% trans 'Tasks' %}</caption>
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Factory number' %}</th>
+        <th scope="col">{% trans 'Inventory number' %}</th>
+        <th scope="col">{% trans 'Registration number' %}</th>
+        <th scope="col">{% trans 'Created date' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for eq in equipment %}
+    <tr>
+        <th scope="row">{{ eq.pk }}</th>
+        <td><a href="/equipment/{{ eq.pk }}">{{ eq.name }}</a></td>
+        <td>{{ eq.factory_num }}</td>
+        <td>{{ eq.inventory_num }}</td>
+        <td>{{ eq.registr_num }}</td>
+        <td>{{ eq.created_date }}</td>
+        <td>
+            <a href="/tasks/{{ eq.pk }}/update/">{{ btn_update }}</a>
+            <br>
+            <a href="/tasks/{{ eq.pk }}/delete/">{{ btn_delete }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
