@@ -12,7 +12,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY',)
 
 DEBUG = bool(os.environ.get('DEBUG', False))
 
-ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/']
+ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/', 'localhost']
+
 X_FRAME_OPTIONS = '*'
 
 # Application definition
@@ -25,9 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
+    'equipment.apps.EquipmentConfig',
     'ndt_manager.apps.NDTManagerConfig',
     'users.apps.UsersConfig',
-    'equipment.apps.EquipmentConfig',
     'django_filters',
 ]
 
