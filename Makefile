@@ -14,14 +14,10 @@ shell:
 		$(LOCAL) shell_plus
 secretkey:
 		poetry run python -c 'from django.utils.crypto import get_random_string; print(get_random_string(40))'
-migrations:
-		$(LOCAL) makemigrations ndt_manager equipment users stations equiptypes
-migrate:
-		$(LOCAL) migrate
 
 # migrate commands
 migrations:
-		$(LOCAL) makemigrations
+		$(LOCAL) makemigrations ndt_manager equipment users stations equiptypes
 migrate:
 		$(LOCAL) migrate
 migrate-rw:

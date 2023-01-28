@@ -3,9 +3,9 @@ from django.urls import reverse_lazy
 from django.views.generic import (DetailView, CreateView,
                                   UpdateView, DeleteView, ListView,
                                   )
-from django_filters.views import FilterView
 from django.utils.translation import gettext_lazy as _
 from equipment.models import Equipment
+# from django_filters.views import FilterView
 # from tasks.filters import TaskFilterForm
 
 

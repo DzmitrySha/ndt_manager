@@ -27,12 +27,12 @@ class Equipment(models.Model):
         default=timezone.now, blank=True)
     op_time = models.IntegerField(
         verbose_name=_('Total operation time'), blank=True)
-    
+
     last_repair_date = models.DateTimeField(
         verbose_name=_("Last repair date"), default=timezone.now, blank=True)
     op_time_after_repairs = models.IntegerField(
         verbose_name=_('Operation time after major repairs'), blank=True)
-    
+
     # executor = models.ForeignKey(
     #     to=get_user_model(), on_delete=models.CASCADE, blank=True, null=True,
     #     default='', related_name='executors', verbose_name=_('Executor'),
@@ -57,4 +57,5 @@ class Equipment(models.Model):
 
 # class Relations(models.Model):
 #     task = models.ForeignKey(to='tasks.Task', on_delete=models.CASCADE)
-#     label = models.ForeignKey(to='labels.TaskLabels', on_delete=models.PROTECT)
+#     label = models.ForeignKey(to='labels.TaskLabels',
+#     on_delete=models.PROTECT)
