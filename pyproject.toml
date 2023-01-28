@@ -8,13 +8,24 @@ authors = ["Your Name <you@example.com>"]
 description = ""
 name = "django-template"
 version = "0.1.0"
+
 [tool.poetry.dependencies]
 Django = "^3.0"
-python = "^3.8"
+python = ">=3.8.1,<4.0"
 python-dotenv = "^0.21.1"
 django-bootstrap4 = "^22.3"
 django-filter = "^22.1"
 django-extensions = "^3.2.1"
 dj-database-url = "^1.2.0"
 rollbar = "^0.16.3"
+whitenoise = "^6.3.0"
+psycopg2-binary = "^2.9.5"
+gunicorn = "^20.1.0"
+
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+pytest-cov = "^4.0.0"
+pytest-django = "^4.5.2"
+
