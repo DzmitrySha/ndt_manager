@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+
+    <form method="post" class="form">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <button submit="{{ btn_name }}" class="btn btn-info btn-lg">
+          {{ btn_name }}
+      </button>
+    </form>
+
+</div>
+
+{% endblock %}
