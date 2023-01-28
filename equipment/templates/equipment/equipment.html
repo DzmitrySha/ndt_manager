@@ -19,10 +19,10 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Station number' %}</th>
         <th scope="col">{% trans 'Factory number' %}</th>
-        <th scope="col">{% trans 'Inventory number' %}</th>
         <th scope="col">{% trans 'Registration number' %}</th>
-        <th scope="col">{% trans 'Created date' %}</th>
+        <th scope="col">{% trans 'Operation time (hours)' %}</th>
         <th scope="col"></th>
     </tr>
     </thead>
@@ -31,14 +31,14 @@
     <tr>
         <th scope="row">{{ eq.pk }}</th>
         <td><a href="/equipment/{{ eq.pk }}">{{ eq.name }}</a></td>
+        <td>{{ eq.station_num }}</td>
         <td>{{ eq.factory_num }}</td>
-        <td>{{ eq.inventory_num }}</td>
-        <td>{{ eq.registr_num }}</td>
-        <td>{{ eq.created_date }}</td>
+        <td>{{ eq.register_num }}</td>
+        <td>{{ eq.op_time }}</td>
         <td>
-            <a href="/tasks/{{ eq.pk }}/update/">{{ btn_update }}</a>
+            <a href="/equipment/{{ eq.pk }}/update/">{{ btn_update }}</a>
             <br>
-            <a href="/tasks/{{ eq.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/equipment/{{ eq.pk }}/delete/">{{ btn_delete }}</a>
         </td>
     </tr>
     {% endfor %}

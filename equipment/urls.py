@@ -1,6 +1,7 @@
 from django.urls import path
 from equipment.views import (
-    EquipmentList, EquipmentDetailView, CreateEquipment, UpdateEquipment, DeleteEquipment,
+    EquipmentList, EquipmentDetailView, CreateEquipment,
+    UpdateEquipment, DeleteEquipment,
 )
 
 urlpatterns = [

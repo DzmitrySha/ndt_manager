@@ -13,14 +13,16 @@ class Equipment(models.Model):
     updated_date = models.DateTimeField(verbose_name=_("Updated date"),
                                         auto_now=True)
     # equipment_type = models.ForeignKey(...)
-    
+
+    station_num = models.CharField(
+        verbose_name=_('Station number'), max_length=2, blank=True)
     factory_num = models.CharField(
         verbose_name=_('Factory number'), max_length=20, blank=True)
     inventory_num = models.CharField(
         verbose_name=_('Inventory number'), max_length=20, blank=True)
-    registr_num = models.CharField(
+    register_num = models.CharField(
         verbose_name=_('Registration number'), max_length=20, blank=True)
-    start_op_date = models.DateTimeField(
+    start_op_date = models.DateField(
         verbose_name=_("Start operation date"),
         default=timezone.now, blank=True)
     op_time = models.IntegerField(

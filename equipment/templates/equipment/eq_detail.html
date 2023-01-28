@@ -17,6 +17,11 @@
     <p>{{ equipment.pk }}</p>
     <hr>
     <div class="container">
+
+      <div class="row p-2">
+        <div class="col">{% trans 'Station number' %}</div>
+        <div class="col">{{ equipment.station_num }}</div>
+      </div>
       <div class="row p-2">
         <div class="col">{% trans 'Factory number' %}</div>
         <div class="col">{{ equipment.factory_num }}</div>
@@ -26,17 +31,30 @@
         <div class="col">{{ equipment.inventory_num }}</div>
       </div>
       <div class="row p-2">
-        <div class="col">{% trans 'Registration number' %}</div>
-        <div class="col">{{ equipment.registr_num }}</div>
+        <div class="col">{% trans 'Register number' %}</div>
+        <div class="col">{{ equipment.register_num }}</div>
       </div>
       <div class="row p-2">
-        <div class="col">{% trans 'Created date' %}</div>
-        <div class="col">{{ equipment.created_date }}</div>
+        <div class="col">{% trans 'Start operation date' %}</div>
+        <div class="col">{{ equipment.start_op_date }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Operation time (hours)' %}</div>
+        <div class="col">{{ equipment.op_time }} {% trans '(hours)' %}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Last major repair date' %}</div>
+        <div class="col">{{ equipment.last_repair_date }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Operation time after major repair (hours)' %}</div>
+        <div class="col">{{ equipment.op_time_after_repairs }} {% trans '(hours)' %}</div>
       </div>
       <div class="row p-2">
         <div class="col">{% trans 'Description' %}</div>
         <div class="col">{{ equipment.description }}</div>
       </div>
+
       <div class="row p-2">
         <div class="col">
           <a href="/equipments/{{ equipment.id }}/update/">{% trans 'Update' %}</a>

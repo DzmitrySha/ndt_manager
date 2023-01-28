@@ -23,20 +23,51 @@ class EquipmentList(ListView):
 
 class EquipmentDetailView(DetailView):
     model = Equipment
-    template_name = 'eq_detail.html'
-    pass
+    template_name = 'equipment/eq_detail.html'
+    context_object_name = "equipment"
+    extra_context = {'title': _('Equipment view'),
+                     'btn_update': _('Update'),
+                     'btn_delete': _('Delete'),
+                     }
 
 
-class CreateEquipment(CreateView):
+class CreateEquipment(SuccessMessageMixin, CreateView):
     model = Equipment
-    pass
+    fields = [
+        'name', 'station_num', 'factory_num', 'inventory_num', 'register_num',
+        'start_op_date', 'op_time', 'last_repair_date', 'op_time_after_repairs',
+        'description',
+    ]
+    template_name = "equipment/form.html"
+    success_message = _('Equipment successfully created')
+    success_url = reverse_lazy('equipment')
+    extra_context = {'title': _('Create equipment'),
+                     'btn_name': _('Create')
+                     }
 
 
 class UpdateEquipment(UpdateView):
     model = Equipment
-    pass
+    fields = [
+        'name', 'station_num', 'factory_num', 'inventory_num', 'register_num',
+        'start_op_date', 'op_time', 'last_repair_date', 'op_time_after_repairs',
+        'description',
+    ]
+    template_name = "equipment/form.html"
+    success_message = _('Equipment successfully updated')
+    success_url = reverse_lazy('equipment')
+    extra_context = {'title': _('Update equipment'),
+                     'btn_name': _('Update'),
+                     }
 
 
 class DeleteEquipment(DeleteView):
     model = Equipment
-    pass
+    template_name = "equipment/delete.html"
+    context_object_name = "equipment"
+    success_message = _('Equipment successfully deleted')
+    success_url = reverse_lazy('equipment')
+    extra_context = {'title': _('Delete equipment'),
+                     'btn_name': _('Yes, delete'),
+                     }
+    # permission_required = 'equipment.author'
