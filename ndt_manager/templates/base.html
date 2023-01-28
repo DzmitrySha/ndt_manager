@@ -34,6 +34,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="{% url 'home' %}">{% trans 'NDT Manager' %}</a>
 
@@ -43,34 +44,54 @@
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users' %}">{% trans 'Users' %}<span
+                        class="sr-only">(current)</span></a>
+            </li>
+        {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'equipment' %}">{% trans 'Equipment' %}<span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parameters</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="{% url 'stations' %}">{% trans 'Stations' %}</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        {% endif %}
+        </ul>
+
+        {% if request.user.is_authenticated %}
+        <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item mr-sm-2">
+                <a class="nav-link" href="{% url 'users' %}{{ user.pk }}">{{ request.user.username }}</a>
+            </li>
+            <li class="nav-item mr-sm-2">
+                <a class="nav-link" href="{% url 'logout' %}">{% trans 'Logout' %}<span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        {% else %}
+        <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item mr-sm-2">
+                <a class="nav-link" href="{% url 'login' %}">{% trans 'Login' %}<span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item my-2 my-sm-0">
+                <a class="nav-link" href="{% url 'create' %}">{% trans 'Registration' %}<span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+
+        {% endif %}
+
     </div>
-
-
-
 </nav>
 
 <main role="main" class="container">
@@ -86,7 +107,7 @@
 <footer class="flex-wrap mx-auto">
   <div class="container my-5 pt-4 border-top">
     <a class="text-muted text-center text-decoration-none"
-       target="_blank" href="https://replit.com/@DzmitrySha/lnkmanager">
+       target="_blank" href="https://replit.com/@DzmitrySha/ndtmanager">
         {% trans 'This project on ReplIt' %}
     </a>
       <br>

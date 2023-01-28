@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'equipment.apps.EquipmentConfig',
     'ndt_manager.apps.NDTManagerConfig',
+    'stations.apps.StationsConfig',
     'users.apps.UsersConfig',
     'django_filters',
 ]
