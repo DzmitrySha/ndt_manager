@@ -3,7 +3,7 @@ runserver:
 runserver3000:
 		python3 manage.py runserver 0.0.0.0:3000
 migrations:
-		python3 manage.py makemigrations ndt_manager, equipment, users
+		python3 manage.py makemigrations ndt_manager equipment users stations
 migrate:
 		python3 manage.py migrate
 shell:
