@@ -18,24 +18,24 @@
     <thead>
     <tr>
         <th scope="col">ID</th>
+        <th scope="col">{% trans 'Station' %}</th>
         <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Station number' %}</th>
         <th scope="col">{% trans 'Factory number' %}</th>
         <th scope="col">{% trans 'Registration number' %}</th>
         <th scope="col">{% trans 'Operation time (hours)' %}</th>
-        <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
     {% for eq in equipment %}
     <tr>
         <th scope="row">{{ eq.pk }}</th>
+        <td>{{ eq.station }}</td>
         <td><a href="/equipment/{{ eq.pk }}">{{ eq.name }}</a></td>
         <td>{{ eq.station_num }}</td>
         <td>{{ eq.factory_num }}</td>
         <td>{{ eq.register_num }}</td>
         <td>{{ eq.op_time }}</td>
-        <td></td>
         <td>
             <a href="/equipment/{{ eq.pk }}/update/">{{ btn_update }}</a>
             <br>
