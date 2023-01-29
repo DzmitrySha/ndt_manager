@@ -34,9 +34,9 @@ class EquipmentDetailView(DetailView):
 class CreateEquipment(SuccessMessageMixin, CreateView):
     model = Equipment
     fields = [
-        'name', 'station_num', 'factory_num', 'inventory_num', 'register_num',
-        'start_op_date', 'op_time', 'last_repair_date', 'op_time_after_repairs',
-        'description',
+        'name', 'station', 'equipment_type', 'station_num', 'factory_num',
+        'inventory_num', 'register_num', 'start_op_date', 'op_time',
+        'last_repair_date', 'op_time_after_repairs', 'description',
     ]
     template_name = "equipment/form.html"
     success_message = _('Equipment successfully created')
@@ -49,9 +49,9 @@ class CreateEquipment(SuccessMessageMixin, CreateView):
 class UpdateEquipment(UpdateView):
     model = Equipment
     fields = [
-        'name', 'station_num', 'factory_num', 'inventory_num', 'register_num',
-        'start_op_date', 'op_time', 'last_repair_date', 'op_time_after_repairs',
-        'description',
+        'name', 'station', 'equipment_type', 'station_num', 'factory_num',
+        'inventory_num', 'register_num', 'start_op_date', 'op_time',
+        'last_repair_date', 'op_time_after_repairs', 'description',
     ]
     template_name = "equipment/form.html"
     success_message = _('Equipment successfully updated')
@@ -66,7 +66,7 @@ class DeleteEquipment(DeleteView):
     template_name = "equipment/delete.html"
     context_object_name = "equipment"
     success_message = _('Equipment successfully deleted')
-    success_url = reverse_lazy('equipment')
+    success_url = reverse_lazy('equipments')
     extra_context = {'title': _('Delete equipment'),
                      'btn_name': _('Yes, delete'),
                      }
