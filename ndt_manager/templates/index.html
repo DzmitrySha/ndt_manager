@@ -9,6 +9,18 @@
     <p class="lead">{{ description }}</p>
     <hr>
 
+        {% if request.user.is_authenticated %}
+      <div>
+          <a class="btn btn-info btn-lg" href="{% url 'users' %}{{ user.pk }}">{% trans 'User Profile' %}</a>
+          <a class="btn btn-danger btn-lg" href="{% url 'logout' %}">{% trans 'Logout' %}</a>
+      </div>
+        {% else %}
+      <div>
+          <a class="btn btn-info btn-lg" href="{% url 'login' %}">{% trans 'Login' %}</a>
+          <a class="btn btn-success btn-lg" href="{% url 'create' %}">{% trans 'Registration' %}</a>
+      </div>
+        {% endif %}
+
   </div>
 </div>
 
