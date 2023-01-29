@@ -13,8 +13,8 @@
 <a class="nav-link" href="{% url 'equipment_create' %}">{% trans 'Create equipment' %}</a>
 
 
-<table class="table">
-    <caption>{% trans 'Tasks' %}</caption>
+<table class="table" aria-label="Equipment table">
+    <caption class="invisible">{% trans 'Equipment table' %}</caption>
     <thead>
     <tr>
         <th scope="col">ID</th>
@@ -35,6 +35,7 @@
         <td>{{ eq.factory_num }}</td>
         <td>{{ eq.register_num }}</td>
         <td>{{ eq.op_time }}</td>
+        <td></td>
         <td>
             <a href="/equipment/{{ eq.pk }}/update/">{{ btn_update }}</a>
             <br>
