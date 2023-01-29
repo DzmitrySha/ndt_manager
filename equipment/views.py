@@ -25,7 +25,7 @@ class EquipmentDetailView(DetailView):
     model = Equipment
     template_name = 'equipment/eq_detail.html'
     context_object_name = "equipment"
-    extra_context = {'title': _('Equipment view'),
+    extra_context = {'title': _('Equipment card'),
                      'btn_update': _('Update'),
                      'btn_delete': _('Delete'),
                      }

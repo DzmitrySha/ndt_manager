@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-29 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: users/apps.py:8 users/views.py:21
+msgid "Users"
+msgstr "Пользователи"
+
+#: users/forms.py:12
+msgid "Enter user first name."
+msgstr "Введите Ваше имя"
+
+#: users/forms.py:13
+msgid "Enter user last name."
+msgstr "Введите Вашу фамилию"
+
+#: users/mixins.py:16
+msgid "You don't have the rights to change another user."
+msgstr "У вас нет прав для изменения другого пользователя."
+
+#: users/mixins.py:21
+msgid "You are not logged in. Please log in."
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: users/templates/users/delete.html:14
+msgid "Are you sure want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
+#: users/templates/users/user.html:10
+msgid "User"
+msgstr "Пользователь"
+
+#: users/templates/users/user.html:21 users/templates/users/users.html:17
+msgid "Full name"
+msgstr "Полное имя"
+
+#: users/templates/users/user.html:25
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: users/templates/users/user.html:29
+msgid "Date joined"
+msgstr "Дата регистрации"
+
+#: users/templates/users/user.html:33
+msgid "Last login"
+msgstr "Последний вход"
+
+#: users/templates/users/user.html:39 users/views.py:22 users/views.py:32
+#: users/views.py:55
+msgid "Update"
+msgstr "Изменить"
+
+#: users/templates/users/user.html:41 users/views.py:23 users/views.py:33
+msgid "Delete"
+msgstr "Удалить"
+
+#: users/templates/users/users.html:16
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: users/templates/users/users.html:18
+msgid "Created date"
+msgstr "Дата создания"
+
+#: users/views.py:31
+msgid "User card"
+msgstr "Карточка пользователя"
+
+#: users/views.py:41
+msgid "User successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: users/views.py:42
+msgid "Registration user"
+msgstr "Регистрация пользователя"
+
+#: users/views.py:43
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: users/views.py:52
+msgid "User successfully updated"
+msgstr "Пользователь успешно изменён"
+
+#: users/views.py:54
+msgid "Update user"
+msgstr "Изменение пользователя"
+
+#: users/views.py:64
+msgid "User successfully deleted"
+msgstr "Пользователь успешно удалён"
+
+#: users/views.py:66
+msgid "Delete user"
+msgstr "Удаление пользователя"
+
+#: users/views.py:67
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: users/views.py:76
+msgid "It`s not possible to delete a User that is being used"
+msgstr "Невозможно удалить пользователя, потому что он используется"

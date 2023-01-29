@@ -28,7 +28,7 @@ class UserDetailView(DetailView):
     model = get_user_model()
     template_name = "users/user.html"
     context_object_name = "user"
-    extra_context = {'title': _('User'),
+    extra_context = {'title': _('User card'),
                      'btn_update': _('Update'),
                      'btn_delete': _('Delete'),
                      }

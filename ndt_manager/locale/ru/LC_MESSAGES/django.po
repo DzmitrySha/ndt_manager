@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-29 18:25+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ndt_manager/apps.py:7 ndt_manager/templates/base.html:39
+msgid "NDT Manager"
+msgstr "Менеджер ЛНКиТД"
+
+#: ndt_manager/mixins.py:14
+msgid "You are not logged in. Please log in."
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: ndt_manager/templates/base.html:52
+msgid "Users"
+msgstr "Пользователи"
+
+#: ndt_manager/templates/base.html:56
+msgid "Equipment"
+msgstr "Оборудование"
+
+#: ndt_manager/templates/base.html:60
+msgid "Parameters"
+msgstr "Параметры"
+
+#: ndt_manager/templates/base.html:62
+msgid "Stations"
+msgstr "Станции"
+
+#: ndt_manager/templates/base.html:63
+msgid "Equipment types"
+msgstr "Типы оборудования"
+
+#: ndt_manager/templates/base.html:76 ndt_manager/templates/index.html:15
+msgid "Logout"
+msgstr "Выйти"
+
+#: ndt_manager/templates/base.html:83 ndt_manager/templates/index.html:19
+#: ndt_manager/views.py:21
+msgid "Login"
+msgstr "Войти"
+
+#: ndt_manager/templates/base.html:87 ndt_manager/templates/index.html:20
+msgid "Registration"
+msgstr "Регистрация"
+
+#: ndt_manager/templates/base.html:111
+msgid "This project on ReplIt"
+msgstr "Этот проект на GitHub"
+
+#: ndt_manager/templates/base.html:116
+msgid "More projects"
+msgstr "Ещё проекты"
+
+#: ndt_manager/templates/index.html:14
+msgid "User Profile"
+msgstr "Профиль пользователя"
+
+#: ndt_manager/views.py:12
+msgid "NDT manager"
+msgstr "Менеджер ЛНКиТД"
+
+#: ndt_manager/views.py:13
+msgid "A simple and functional NDT MANAGER."
+msgstr "Простой и функциональный менеджер ЛНКиТД"
+
+#: ndt_manager/views.py:20
+msgid "You are logged in."
+msgstr "Вы успешно авторизованы"
+
+#: ndt_manager/views.py:22
+msgid "Enter"
+msgstr "Войти"
+
+#: ndt_manager/views.py:35
+msgid "You are logged out."
+msgstr "Вы успешно вышли из системы"
