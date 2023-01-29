@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+</div>
+
+<a class="nav-link" href="{% url 'equiptype_create' %}">{% trans 'Create equipment type' %}</a>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">{% trans 'Name' %}</th>
+        <th scope="col">{% trans 'Created date' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for equiptype in equiptypes %}
+    <tr>
+        <th scope="row">{{ equiptype.pk }}</th>
+        <td>{{ equiptype.name }}</td>
+        <td>{{ equiptype.created_at }}</td>
+        <td>
+            <a href="/equiptypes/{{ equiptype.pk }}/update/">{{ btn_update }}</a>
+            <br>
+            <a href="/equiptypes/{{ equiptype.pk }}/delete/">{{ btn_delete }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

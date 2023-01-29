@@ -10,5 +10,6 @@ urlpatterns = [
     path('login/', LoginUser.as_view(), name="login"),
     path('logout/', LogoutUser.as_view(), name="logout"),
     path('equipment/', include('equipment.urls')),
+    path('equiptypes/', include('equiptypes.urls')),
     path('stations/', include('stations.urls')),
 ]

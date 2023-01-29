@@ -12,8 +12,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY',)
 DEBUG = bool(os.environ.get('DEBUG', False))
 
 ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/', 'localhost']
-CSRF_TRUSTED_ORIGINS = []
-X_FRAME_OPTIONS = '*'
+# CSRF_TRUSTED_ORIGINS = []
+# X_FRAME_OPTIONS = '*'
 
 # Application definition
 
@@ -26,8 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'bootstrap4',
-    'equipment.apps.EquipmentConfig',
     'ndt_manager.apps.NDTManagerConfig',
+    'equipment.apps.EquipmentConfig',
+    'equiptypes.apps.EquiptypesConfig',
     'stations.apps.StationsConfig',
     'users.apps.UsersConfig',
     'django_filters',
