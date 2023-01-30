@@ -19,6 +19,7 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">{% trans 'Station' %}</th>
+        <th scope="col">{% trans 'Object type' %}</th>
         <th scope="col">{% trans 'Name' %}</th>
         <th scope="col">{% trans 'Station number' %}</th>
         <th scope="col">{% trans 'Factory number' %}</th>
@@ -31,6 +32,7 @@
     <tr>
         <th scope="row">{{ eq.pk }}</th>
         <td>{{ eq.station }}</td>
+        <td>{{ eq.equipment_type }}</td>
         <td><a href="/equipment/{{ eq.pk }}">{{ eq.name }}</a></td>
         <td>{{ eq.station_num }}</td>
         <td>{{ eq.factory_num }}</td>

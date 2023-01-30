@@ -11,28 +11,23 @@
 
 <div class="card">
   <div class="card-header bg-info text-white">
-    <h2>{{ equipment.name }}</h2>
+    <h2>{{ equipment.equipment_type }} {{ equipment.name }}, {% trans 'st.' %}№{{ equipment.station_num }}</h2>
   </div>
   <div class="card-body bg-light">
-    <p>{{ equipment.station }}</p>
+    <p><h4>{{ equipment.station }}</h4></p>
     <hr>
     <div class="container">
-
-      <div class="row p-2">
-        <div class="col">{% trans 'Station number' %}</div>
-        <div class="col">{{ equipment.station_num }}</div>
-      </div>
       <div class="row p-2">
         <div class="col">{% trans 'Factory number' %}</div>
         <div class="col">{{ equipment.factory_num }}</div>
       </div>
       <div class="row p-2">
-        <div class="col">{% trans 'Inventory number' %}</div>
-        <div class="col">{{ equipment.inventory_num }}</div>
-      </div>
-      <div class="row p-2">
         <div class="col">{% trans 'Register number' %}</div>
         <div class="col">{{ equipment.register_num }}</div>
+      </div>
+      <div class="row p-2">
+        <div class="col">{% trans 'Inventory number' %}</div>
+        <div class="col">{{ equipment.inventory_num }}</div>
       </div>
       <div class="row p-2">
         <div class="col">{% trans 'Start operation date' %}</div>
