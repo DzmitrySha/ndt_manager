@@ -60,7 +60,7 @@ msgstr "Регистрационный номер"
 
 #: equipment/models.py:24 equipment/templates/equipment/eq_detail.html:38
 msgid "Start operation date"
-msgstr "Дата начала эксплуатации"
+msgstr "Дата ввода в эксплуатацию"
 
 #: equipment/models.py:27
 msgid "Total operation time"
