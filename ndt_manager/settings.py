@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'ndt_manager.apps.NDTManagerConfig',
     'equipment.apps.EquipmentConfig',
     'equiptypes.apps.EquiptypesConfig',
+    'reports.apps.ReportsConfig',
     'stations.apps.StationsConfig',
     'users.apps.UsersConfig',
     'django_filters',
