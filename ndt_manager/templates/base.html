@@ -49,19 +49,19 @@
         <ul class="navbar-nav mr-auto">
         {% if request.user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'users' %}">{% trans 'Users' %}<span
-                        class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'users' %}">{% trans 'Users' %}<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'equipment' %}">{% trans 'Equipment' %}<span
-                        class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'equipment' %}">{% trans 'Equipment' %}<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'reports' %}">{% trans 'Reports' %}<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'Parameters' %}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                   <a class="dropdown-item" href="{% url 'stations' %}">{% trans 'Stations' %}</a>
                   <a class="dropdown-item" href="{% url 'equiptypes' %}">{% trans 'Equipment types' %}</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
         {% endif %}
