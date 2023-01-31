@@ -6,12 +6,12 @@ from django.utils.translation import gettext_lazy as _
 
 class Equipment(models.Model):
     name = models.CharField(max_length=120, verbose_name=_('Name/model'),
-                            blank=False)
+                            blank=False, unique=True)
     description = models.TextField(verbose_name=_('Description'), blank=True)
     created_at = models.DateTimeField(verbose_name=_("Created date"),
-                                        default=timezone.now)
+                                      default=timezone.now)
     updated_at = models.DateTimeField(verbose_name=_("Updated date"),
-                                        auto_now=True)
+                                      auto_now=True)
     station_num = models.CharField(
         verbose_name=_('Station number'), max_length=4, blank=True)
     factory_num = models.CharField(
@@ -19,7 +19,8 @@ class Equipment(models.Model):
     inventory_num = models.CharField(
         verbose_name=_('Inventory number'), max_length=12, blank=True)
     register_num = models.CharField(
-        verbose_name=_('Registration number'), max_length=16, blank=True)
+        verbose_name=_('Registration number'), max_length=16, blank=True,
+        unique=True)
     start_op_date = models.DateField(
         verbose_name=_("Start operation date"),
         default=timezone.now, blank=True)

@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class EquipType(models.Model):
-    name = models.CharField(max_length=60, verbose_name=_('Name'), default='')
+    name = models.CharField(max_length=60, verbose_name=_('Name'), unique=True)
     created_at = models.DateTimeField(verbose_name=_("Created date"),
                                       default=timezone.now)
 
