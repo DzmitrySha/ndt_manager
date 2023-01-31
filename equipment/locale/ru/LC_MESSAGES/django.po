@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-30 14:07+0300\n"
+"POT-Creation-Date: 2023-01-31 22:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,27 +57,27 @@ msgstr "Инвентарный номер"
 msgid "Registration number"
 msgstr "Регистрационный номер"
 
-#: equipment/models.py:24 equipment/templates/equipment/eq_detail.html:33
+#: equipment/models.py:25 equipment/templates/equipment/eq_detail.html:33
 msgid "Start operation date"
 msgstr "Дата ввода в эксплуатацию"
 
-#: equipment/models.py:27
+#: equipment/models.py:28
 msgid "Total operation time"
 msgstr "Наработка"
 
-#: equipment/models.py:29
+#: equipment/models.py:30
 msgid "Last repair date"
 msgstr "Дата последнего капремонта"
 
-#: equipment/models.py:31
+#: equipment/models.py:32
 msgid "Operation time after major repairs"
 msgstr "Наработка после капремонта"
 
-#: equipment/models.py:34
+#: equipment/models.py:35
 msgid "Equipment type"
 msgstr "Тип оборудования"
 
-#: equipment/models.py:38 equipment/templates/equipment/equipment.html:21
+#: equipment/models.py:39 equipment/templates/equipment/equipment.html:21
 msgid "Station"
 msgstr "Станция"
 
@@ -90,8 +90,8 @@ msgid "Equipment detail view"
 msgstr "Карточка оборудования"
 
 #: equipment/templates/equipment/eq_detail.html:14
-msgid "st."
-msgstr "ст."
+msgid "st.№"
+msgstr "ст.№"
 
 #: equipment/templates/equipment/eq_detail.html:25
 msgid "Register number"
