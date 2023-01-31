@@ -10,27 +10,36 @@
     <h1 class="my-4">{{ title }}</h1>
 </div>
 
-<a class="nav-link" href="{% url 'station_create' %}">{% trans 'Create station' %}</a>
+<a class="nav-link" href="{% url 'report_create' %}">{% trans 'Create report' %}</a>
 
 <table class="table">
     <thead>
     <tr>
         <th scope="col">ID</th>
-        <th scope="col">{% trans 'Name' %}</th>
-        <th scope="col">{% trans 'Address' %}</th>
+        <th scope="col">{% trans 'Report number' %}</th>
+        <th scope="col">{% trans 'Report date' %}</th>
+        <th scope="col">{% trans 'Report type' %}</th>
+        <th scope="col">{% trans 'Equipment type' %}</th>
+        <th scope="col">{% trans 'Equipment name' %}</th>
+        <th scope="col">{% trans 'Station' %}</th>
+
         <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    {% for station in stations %}
+    {% for report in reports %}
     <tr>
-        <th scope="row">{{ station.pk }}</th>
-        <td>{{ station.name }}</td>
-        <td>{{ station.address }}</td>
+        <th scope="row">{{ report.pk }}</th>
+        <td>{{ report.report_num }}</td>
+        <td>{{ report.report_date }}</td>
+        <td>{{ report.report_type }}</td>
+        <td>{{ report.equipment.equipment_type }} </td>
+        <td>{{ report.equipment.name }}, {% trans 'st.№' %}{{ report.equipment.station_num }}</td>
+        <td>{{ report.equipment.station }}</td>
         <td>
-            <a href="/stations/{{ station.pk }}/update/">{{ btn_update }}</a>
+            <a href="/reports/{{ report.pk }}/update/">{{ btn_update }}</a>
             <br>
-            <a href="/stations/{{ station.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/reports/{{ report.pk }}/delete/">{{ btn_delete }}</a>
         </td>
     </tr>
     {% endfor %}

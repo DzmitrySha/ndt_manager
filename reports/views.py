@@ -20,7 +20,8 @@ class ReportsList(AppLoginRequiredMixin, ListView):
 
 class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
     model = Report
-    fields = ['name', 'address']
+    fields = ['report_num', 'report_date', 'report_type',
+              'equipment', 'parts_names', 'description']
     template_name = "reports/form.html"
     success_message = _('Report successfully created')
     success_url = reverse_lazy('reports')
@@ -31,7 +32,8 @@ class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
 
 class UpdateReport(SuccessMessageMixin, AppLoginRequiredMixin, UpdateView):
     model = Report
-    fields = ['name', 'address']
+    fields = ['report_num', 'report_date', 'report_type',
+              'equipment', 'parts_names', 'description']
     template_name = "reports/form.html"
     success_message = _('Report successfully updated')
     success_url = reverse_lazy('reports')
