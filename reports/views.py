@@ -4,6 +4,8 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (ListView, CreateView, UpdateView, DeleteView)
+
+from reports.forms import ReportForm
 from reports.models import Report
 from ndt_manager.mixins import AppLoginRequiredMixin
 
@@ -20,8 +22,7 @@ class ReportsList(AppLoginRequiredMixin, ListView):
 
 class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
     model = Report
-    fields = ['report_num', 'report_date', 'report_type',
-              'equipment', 'parts_names', 'description']
+    form_class = ReportForm
     template_name = "reports/form.html"
     success_message = _('Report successfully created')
     success_url = reverse_lazy('reports')
@@ -32,8 +33,7 @@ class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
 
 class UpdateReport(SuccessMessageMixin, AppLoginRequiredMixin, UpdateView):
     model = Report
-    fields = ['report_num', 'report_date', 'report_type',
-              'equipment', 'parts_names', 'description']
+    form_class = ReportForm
     template_name = "reports/form.html"
     success_message = _('Report successfully updated')
     success_url = reverse_lazy('reports')
