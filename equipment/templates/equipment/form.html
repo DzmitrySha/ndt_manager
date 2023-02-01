@@ -10,6 +10,7 @@
 
     <form method="post" class="form">
       {% csrf_token %}
+      {{ form.media }}
       {% bootstrap_form form %}
       <button submit="{{ btn_name }}" class="btn btn-info btn-lg">
           {{ btn_name }}

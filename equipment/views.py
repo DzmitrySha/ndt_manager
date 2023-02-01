@@ -1,3 +1,4 @@
+from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic import (DetailView, CreateView,
@@ -44,6 +45,12 @@ class CreateEquipment(SuccessMessageMixin, CreateView):
     extra_context = {'title': _('Create equipment'),
                      'btn_name': _('Create')
                      }
+
+    def get_form(self):
+        form = super().get_form()
+        form.fields["start_op_date"].widget = DatePickerInput()
+        form.fields["start_op_date"].widget = DatePickerInput()
+        return form
 
 
 class UpdateEquipment(UpdateView):

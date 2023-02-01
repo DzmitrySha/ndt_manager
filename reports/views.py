@@ -1,3 +1,4 @@
+from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect
@@ -29,6 +30,11 @@ class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
     extra_context = {'title': _('Create report'),
                      'btn_name': _('Create')
                      }
+
+    def get_form(self):
+        form = super().get_form()
+        form.fields["report_date"].widget = DatePickerInput()
+        return form
 
 
 class UpdateReport(SuccessMessageMixin, AppLoginRequiredMixin, UpdateView):

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django_redis',
     'django_select2',
+    'bootstrap_datepicker_plus',
     'bootstrap4',
     'ndt_manager.apps.NDTManagerConfig',
     'equipment.apps.EquipmentConfig',
