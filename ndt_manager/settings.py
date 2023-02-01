@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'django_redis',
+    'django_select2',
     'bootstrap4',
     'ndt_manager.apps.NDTManagerConfig',
     'equipment.apps.EquipmentConfig',
@@ -137,3 +139,17 @@ FIXTURE_DIRS = ['fixtures']
 if DEBUG:
     INSTALLED_APPS.insert(0, 'django_extensions')
     SHELL_PLUS_PRINT_SQL = True
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+}
+
+# Set the cache backend to select2
+SELECT2_CACHE_BACKEND = 'default'
