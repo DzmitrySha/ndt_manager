@@ -37,7 +37,6 @@ lockfile==0.12.2
 mccabe==0.7.0
 more-itertools==9.0.0
 msgpack==1.0.4
--e git+ssh://git@github.com/DzmitrySha/ndt_manager.git@3d144eeebde900e22f9281940d935df3fc57ee66#egg=ndt_manager
 packaging==23.0
 pexpect==4.8.0
 pkginfo==1.9.6
