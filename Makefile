@@ -6,8 +6,9 @@ install:
 # runserver commands
 runserver:
 		$(LOCAL) runserver localhost:8080
-runserver3000:
-		$(LOCAL) runserver 0.0.0.0:3000
+run-gunicorn:
+		export DJANGO_SETTINGS_MODULE=ndt_manager.settings
+		poetry run gunicorn ndt_manager.wsgi --log-file -
 
 # service commands
 shell:
