@@ -11,9 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY',)
 DEBUG = bool(os.environ.get('DEBUG', False))
 
-ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/', 'localhost']
+ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/', 'localhost',
+                 'https://ndtmanager-production.up.railway.app/']
 # CSRF_TRUSTED_ORIGINS = []
 # X_FRAME_OPTIONS = '*'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://ndtmanager-production.up.railway.app/'
+]
 
 # Application definition
 
