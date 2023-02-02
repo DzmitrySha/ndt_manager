@@ -17,7 +17,7 @@ ALLOWED_HOSTS = ['*', 'http://ndtmanager.dzmitrysha.repl.co/', 'localhost',
 # X_FRAME_OPTIONS = '*'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://ndtmanager-production.up.railway.app/'
+    'https://ndtmanager-production.up.railway.app'
 ]
 
 # Application definition
