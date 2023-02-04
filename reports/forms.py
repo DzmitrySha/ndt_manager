@@ -20,7 +20,6 @@ class ReportCreateForm(forms.ModelForm):
             queryset=Equipment.objects.all(),
             search_fields=['name__icontains'],
             dependent_fields={'station': 'station'},
-
         )
     )
 

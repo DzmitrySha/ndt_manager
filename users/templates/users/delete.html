@@ -13,9 +13,8 @@
         {% csrf_token %}
         <p>{% trans 'Are you sure want to delete' %} "{{ user }}"?</p>
         {% bootstrap_form form %}
-
         <input class="btn btn-danger btn-lg" type="submit" value="Да, удалить">
     </form>
-
 </div>
+
 {% endblock %}
