@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-# from django.contrib.auth import get_user_model
 
 
 class Equipment(models.Model):
@@ -38,23 +37,15 @@ class Equipment(models.Model):
         to='stations.Station', on_delete=models.PROTECT, blank=False,
         related_name='stations', verbose_name=_('Station'), default='')
 
-    # executor = models.ForeignKey(
-    #     to=get_user_model(), on_delete=models.CASCADE, blank=True, null=True,
-    #     default='', related_name='executors', verbose_name=_('Executor'),
-    # )
-    # author = models.ForeignKey(
-    #     to=get_user_model(), on_delete=models.PROTECT, blank=False,
-    #     related_name='authors', verbose_name=_('Author'),
-    # )
+    def __str__(self):
+        return f"{self.equipment_type} {self.name}, " \
+               f"{_('ст.№')}{self.station_num}"
+
     # labels = models.ManyToManyField(
     #     'labels.TaskLabels', through='Relations',
     #     through_fields=('task', 'label'), blank=True,
     #     related_name='labels', verbose_name=_('Labels'),
     # )
-
-    def __str__(self):
-        return self.name
-
 
 # class Relations(models.Model):
 #     task = models.ForeignKey(to='tasks.Task', on_delete=models.CASCADE)
