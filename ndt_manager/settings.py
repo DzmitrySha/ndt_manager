@@ -30,10 +30,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
-    'django_redis',
-    'django_select2',
     'bootstrap_datepicker_plus',
     'bootstrap4',
+    'django_select2',
     'ndt_manager.apps.NDTManagerConfig',
     'equipment.apps.EquipmentConfig',
     'equiptypes.apps.EquiptypesConfig',
@@ -84,15 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ndt_manager.wsgi.application'
 
-
-# Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     "default": dj_database_url.config(conn_max_age=600)
 }
@@ -119,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'ru-ru'
 TIME_ZONE = 'UTC'
 USE_I18N = True
-USE_L10N = True
 USE_TZ = True
 
 LOCALE_URL = "locale/"
@@ -145,17 +134,3 @@ FIXTURE_DIRS = ['fixtures']
 if DEBUG:
     INSTALLED_APPS.insert(0, 'django_extensions')
     SHELL_PLUS_PRINT_SQL = True
-
-
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    },
-}
-
-# Set the cache backend to select2
-SELECT2_CACHE_BACKEND = 'default'
