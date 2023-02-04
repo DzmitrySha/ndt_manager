@@ -81,7 +81,7 @@ class TestUpdateUser(SetupTestUser):
     def test_update_user(self):
         self.client.force_login(self.user1)
         self.assertNotEqual(self.user1.username,
-        self.test_user.get("username"))
+                            self.test_user.get("username"))
         response = self.client.post(self.update_pk1_url, data=self.test_user)
         self.assertEqual(response.status_code, 302)
         self.user1 = get_user_model().objects.get(pk=1)
@@ -91,7 +91,6 @@ class TestUpdateUser(SetupTestUser):
         self.client.force_login(self.user3)
         response = self.client.post(self.update_pk1_url, data=self.test_user)
         self.assertRedirects(response, self.users_url, 302, 200)
-
 
 # class TestDeleteUser(SetupTestUser):
 #     fixtures = ['users.json', 'statuses.json', 'labels.json', 'tasks.json']
