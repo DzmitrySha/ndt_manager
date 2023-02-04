@@ -1,12 +1,12 @@
 from bootstrap_datepicker_plus.widgets import DatePickerInput
-from django.contrib import messages
+# from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import redirect
+# from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (ListView, CreateView, UpdateView, DeleteView)
 
-from reports.forms import ReportForm
+from reports.forms import ReportCreateForm
 from reports.models import Report
 from ndt_manager.mixins import AppLoginRequiredMixin
 
@@ -23,7 +23,7 @@ class ReportsList(AppLoginRequiredMixin, ListView):
 
 class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
     model = Report
-    form_class = ReportForm
+    form_class = ReportCreateForm
     template_name = "reports/form.html"
     success_message = _('Report successfully created')
     success_url = reverse_lazy('reports')
@@ -39,7 +39,7 @@ class CreateReport(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
 
 class UpdateReport(SuccessMessageMixin, AppLoginRequiredMixin, UpdateView):
     model = Report
-    form_class = ReportForm
+    form_class = ReportCreateForm
     template_name = "reports/form.html"
     success_message = _('Report successfully updated')
     success_url = reverse_lazy('reports')
@@ -58,11 +58,11 @@ class DeleteReport(SuccessMessageMixin, AppLoginRequiredMixin, DeleteView):
                      'btn_name': _('Yes, delete'),
                      }
 
-    def post(self, request, *args, **kwargs):
-        if self.get_object().reports.count():
-            messages.error(
-                self.request,
-                _('It`s not possible to delete the report that is being used')
-            )
-            return redirect(self.success_url)
-        return super().post(request, *args, **kwargs)
+    # def post(self, request, *args, **kwargs):
+    #     if self.get_object().reports.count():
+    #         messages.error(
+    #             self.request,
+    #             _('It`s not possible to delete the report that is being used')
+    #         )
+    #         return redirect(self.success_url)
+    #     return super().post(request, *args, **kwargs)
