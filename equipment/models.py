@@ -31,8 +31,7 @@ class Equipment(models.Model):
         verbose_name=_('Operation time after major repairs'), blank=True)
     equipment_type = models.ForeignKey(
         to='equiptypes.EquipType', on_delete=models.PROTECT, blank=False,
-        related_name='equiptypes', verbose_name=_('Equipment type'),
-        default='')
+        related_name='equiptypes', verbose_name=_('Equipment type'))
     station = models.ForeignKey(
         to='stations.Station', on_delete=models.PROTECT, blank=False,
         related_name='stations', verbose_name=_('Station'), default='')
