@@ -13,4 +13,5 @@ urlpatterns = [
     path('equiptypes/', include('equiptypes.urls')),
     path('stations/', include('stations.urls')),
     path('reports/', include('reports.urls')),
+    path('select2/', include('django_select2.urls')),
 ]
