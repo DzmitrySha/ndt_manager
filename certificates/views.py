@@ -21,7 +21,8 @@ class CertificatesList(ListView):
 
 class CreateCertificate(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
     model = Certificate
-    fields = ['number', 'method', 'level', 'start_date', 'finish_date', 'owner', ]
+    fields = ['owner', 'number', 'method', 'level', 'start_date',
+              'finish_date', ]
     template_name = "certificates/form.html"
     success_message = _('Certificate successfully created')
     success_url = reverse_lazy('certificates')
@@ -38,7 +39,8 @@ class CreateCertificate(SuccessMessageMixin, AppLoginRequiredMixin, CreateView):
 
 class UpdateCertificate(SuccessMessageMixin, AppLoginRequiredMixin, UpdateView):
     model = Certificate
-    fields = ['number']
+    fields = ['owner', 'number', 'method', 'level', 'start_date',
+              'finish_date', ]
     template_name = "certificates/form.html"
     success_message = _('Certificate successfully updated')
     success_url = reverse_lazy('certificates')

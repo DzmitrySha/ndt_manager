@@ -16,11 +16,12 @@
     <thead>
     <tr>
         <th scope="col">ID</th>
+        <th scope="col">{% trans 'Owner' %}</th>
         <th scope="col">{% trans 'Number' %}</th>
+        <th scope="col">{% trans 'Method' %}</th>
+        <th scope="col">{% trans 'Level' %}</th>
         <th scope="col">{% trans 'Start date' %}</th>
         <th scope="col">{% trans 'Finish date' %}</th>
-        <th scope="col">{% trans 'Owner' %}</th>
-        <th scope="col">{% trans 'Level' %}</th>
         <th scope="col"></th>
     </tr>
     </thead>
@@ -28,11 +29,12 @@
     {% for certificate in certificates %}
     <tr>
         <th scope="row">{{ certificate.pk }}</th>
+        <td>{{ certificate.owner }}</td>
         <td>{{ certificate.number }}</td>
+        <td>{{ certificate.method }}</td>
+        <td>{{ certificate.level }}</td>
         <td>{{ certificate.start_date }}</td>
         <td>{{ certificate.finish_date }}</td>
-        <td>{{ certificate.owner }}</td>
-        <td>{{ certificate.level }}</td>
         <td>
             <a href="/certificates/{{ certificate.pk }}/update/">{{ btn_update }}</a>
             <br>

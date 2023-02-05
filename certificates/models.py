@@ -29,8 +29,8 @@ class Certificate(models.Model):
 
     created_at = models.DateTimeField(verbose_name=_("Created date"),
                                       default=timezone.now)
-    number = models.CharField(max_length=16)
-    method = models.CharField(max_length=16,
+    number = models.CharField(max_length=32)
+    method = models.CharField(max_length=32,
                               choices=METHOD_CHOICES, default=VT,
                               verbose_name=_('Method'))
     level = models.CharField(max_length=16,
@@ -45,4 +45,4 @@ class Certificate(models.Model):
                               blank=False)
 
     def __str__(self):
-        return f"BY {self.number} from {self.start_date}"
+        return f"{self.number} {_('from')} {self.start_date}"
