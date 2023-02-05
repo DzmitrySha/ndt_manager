@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+</div>
+
+<a class="nav-link" href="{% url 'certificate_create' %}">{% trans 'Create certificate' %}</a>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">{% trans 'Number' %}</th>
+        <th scope="col">{% trans 'Start date' %}</th>
+        <th scope="col">{% trans 'Finish date' %}</th>
+        <th scope="col">{% trans 'Owner' %}</th>
+        <th scope="col">{% trans 'Level' %}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for certificate in certificates %}
+    <tr>
+        <th scope="row">{{ certificate.pk }}</th>
+        <td>{{ certificate.number }}</td>
+        <td>{{ certificate.start_date }}</td>
+        <td>{{ certificate.finish_date }}</td>
+        <td>{{ certificate.owner }}</td>
+        <td>{{ certificate.level }}</td>
+        <td>
+            <a href="/certificates/{{ certificate.pk }}/update/">{{ btn_update }}</a>
+            <br>
+            <a href="/certificates/{{ certificate.pk }}/delete/">{{ btn_delete }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

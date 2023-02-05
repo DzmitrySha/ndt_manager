@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'reports.apps.ReportsConfig',
     'stations.apps.StationsConfig',
     'users.apps.UsersConfig',
+    'certificates.apps.CertificatesConfig',
     'django_filters',
 ]
 

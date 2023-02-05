@@ -24,7 +24,7 @@ compilemess:
 
 # migrate commands
 migrations:
-		$(LOCAL) makemigrations ndt_manager equipment users stations equiptypes reports
+		$(LOCAL) makemigrations ndt_manager equipment users stations equiptypes reports certificates
 migrate:
 		$(LOCAL) migrate
 migrate-rw:
@@ -40,7 +40,7 @@ test-coverage:
 
 # linter & check commands
 lint:
-		poetry run flake8 ndt_manager users stations equipment equiptypes reports
+		poetry run flake8 ndt_manager users stations equipment equiptypes reports certificates
 
 selfcheck:
 		poetry check
