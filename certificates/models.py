@@ -33,7 +33,7 @@ class Certificate(models.Model):
     method = models.CharField(max_length=32,
                               choices=METHOD_CHOICES, default=VT,
                               verbose_name=_('Method'))
-    level = models.CharField(max_length=16,
+    level = models.CharField(max_length=12,
                              choices=LEVEL_CHOICES, default=LEVEL_2,
                              verbose_name=_('Level'))
     start_date = models.DateField(
