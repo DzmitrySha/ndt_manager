@@ -40,7 +40,7 @@ class Certificate(models.Model):
         verbose_name=_('Start date'), default=timezone.now)
     finish_date = models.DateField(
         verbose_name=_('Finish date'),
-        default=timezone.now() + timezone.timedelta(days=365 * 5))
+        default=timezone.now)
     owner = models.ForeignKey(to='users.User', on_delete=models.PROTECT,
                               blank=False)
 

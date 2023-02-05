@@ -59,12 +59,12 @@ class DeleteCertificate(SuccessMessageMixin, AppLoginRequiredMixin, DeleteView):
                      'btn_name': _('Yes, delete'),
                      }
 
-    def post(self, request, *args, **kwargs):
-        if self.get_object().users.count():
-            messages.error(
-                self.request,
-                _('It`s not possible to delete the certificate '
-                  'that is belong to user')
-            )
-            return redirect(self.success_url)
-        return super().post(request, *args, **kwargs)
+    # def post(self, request, *args, **kwargs):
+    #     if self.get_object().owner:
+    #         messages.error(
+    #             self.request,
+    #             _('It`s not possible to delete the certificate '
+    #               'that is belong to user')
+    #         )
+    #         return redirect(self.success_url)
+    #     return super().post(request, *args, **kwargs)
