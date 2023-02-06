@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-06 22:30+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: certificates/models.py:10
+msgid "2nd level"
+msgstr "2-й уровень"
+
+#: certificates/models.py:11
+msgid "3rd level"
+msgstr "3-й уровень"
+
+#: certificates/models.py:12
+msgid "Visual testing method"
+msgstr "Визуальный метод"
+
+#: certificates/models.py:13
+msgid "Ultrasonic testing method"
+msgstr "Ультразвуковой метод"
+
+#: certificates/models.py:14
+msgid "Penetrant testing method"
+msgstr "Цветной метод"
+
+#: certificates/models.py:15
+msgid "Magneting particle testing method"
+msgstr "Магнитопорошковый метод"
+
+#: certificates/models.py:29
+msgid "Created date"
+msgstr "Дата создания"
+
+#: certificates/models.py:35
+#: certificates/templates/certificates/certificates.html:21
+msgid "Method"
+msgstr "Метод"
+
+#: certificates/models.py:38
+#: certificates/templates/certificates/certificates.html:22
+msgid "Level"
+msgstr "Уровень"
+
+#: certificates/models.py:40
+#: certificates/templates/certificates/certificates.html:23
+msgid "Start date"
+msgstr "Дата выдачи"
+
+#: certificates/models.py:42
+#: certificates/templates/certificates/certificates.html:24
+msgid "Finish date"
+msgstr "Дата окончания"
+
+#: certificates/templates/certificates/certificates.html:13
+#: certificates/views.py:29
+msgid "Create certificate"
+msgstr "Создать сертификат"
+
+#: certificates/templates/certificates/certificates.html:19
+msgid "Owner"
+msgstr "Владелец"
+
+#: certificates/templates/certificates/certificates.html:20
+msgid "Number"
+msgstr "Номер"
+
+#: certificates/templates/certificates/delete.html:14
+msgid "Are you sure want to delete certificate"
+msgstr "Вы уверены, что хотите удалить сертификат"
+
+#: certificates/views.py:16
+msgid "Certificates"
+msgstr "Сертификаты"
+
+#: certificates/views.py:17 certificates/views.py:48
+msgid "Update"
+msgstr "Изменить"
+
+#: certificates/views.py:18
+msgid "Delete"
+msgstr "Удалить"
+
+#: certificates/views.py:27
+msgid "Certificate successfully created"
+msgstr "Сертификат успешно создан"
+
+#: certificates/views.py:30
+msgid "Create"
+msgstr "Создать"
+
+#: certificates/views.py:45
+msgid "Certificate successfully updated"
+msgstr "Сертификат успешно изменен"
+
+#: certificates/views.py:47
+msgid "Update certificate"
+msgstr "Изменение сертификата"
+
+#: certificates/views.py:56
+msgid "Certificate successfully deleted"
+msgstr "Сертификат успешно удален"
+
+#: certificates/views.py:58
+msgid "Delete certificate"
+msgstr "Удаление сертификата"
+
+#: certificates/views.py:59
+msgid "Yes, delete"
+msgstr "Да, удалить"

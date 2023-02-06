@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 22:19+0300\n"
+"POT-Creation-Date: 2023-02-06 22:30+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,64 +20,64 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: equipment/apps.py:8 equipment/views.py:17
+#: equipment/apps.py:8 equipment/views.py:18
 msgid "Equipment"
 msgstr "Оборудование"
 
-#: equipment/models.py:8
+#: equipment/models.py:7
 msgid "Name/model"
 msgstr "Наименование/модель"
 
-#: equipment/models.py:10 equipment/templates/equipment/eq_detail.html:49
+#: equipment/models.py:9 equipment/templates/equipment/eq_detail.html:49
 msgid "Description"
 msgstr "Описание"
 
-#: equipment/models.py:11
+#: equipment/models.py:10
 msgid "Created date"
 msgstr "Дата создания"
 
-#: equipment/models.py:13
+#: equipment/models.py:12
 msgid "Updated date"
 msgstr "Дата изменения"
 
-#: equipment/models.py:16 equipment/templates/equipment/equipment.html:24
+#: equipment/models.py:15 equipment/templates/equipment/equipment.html:24
 msgid "Station number"
 msgstr "Станционный номер"
 
-#: equipment/models.py:18 equipment/templates/equipment/eq_detail.html:21
+#: equipment/models.py:17 equipment/templates/equipment/eq_detail.html:21
 #: equipment/templates/equipment/equipment.html:25
 msgid "Factory number"
 msgstr "Заводской номер"
 
-#: equipment/models.py:20 equipment/templates/equipment/eq_detail.html:29
+#: equipment/models.py:19 equipment/templates/equipment/eq_detail.html:29
 msgid "Inventory number"
 msgstr "Инвентарный номер"
 
-#: equipment/models.py:22 equipment/templates/equipment/equipment.html:26
+#: equipment/models.py:21 equipment/templates/equipment/equipment.html:26
 msgid "Registration number"
 msgstr "Регистрационный номер"
 
-#: equipment/models.py:25 equipment/templates/equipment/eq_detail.html:33
+#: equipment/models.py:24 equipment/templates/equipment/eq_detail.html:33
 msgid "Start operation date"
 msgstr "Дата ввода в эксплуатацию"
 
-#: equipment/models.py:28
+#: equipment/models.py:27
 msgid "Total operation time"
 msgstr "Наработка"
 
-#: equipment/models.py:30
+#: equipment/models.py:29
 msgid "Last repair date"
 msgstr "Дата последнего капремонта"
 
-#: equipment/models.py:32
+#: equipment/models.py:31
 msgid "Operation time after major repairs"
 msgstr "Наработка после капремонта"
 
-#: equipment/models.py:35
+#: equipment/models.py:34
 msgid "Equipment type"
 msgstr "Тип оборудования"
 
-#: equipment/models.py:39 equipment/templates/equipment/equipment.html:21
+#: equipment/models.py:37 equipment/templates/equipment/equipment.html:21
 msgid "Station"
 msgstr "Станция"
 
@@ -115,17 +115,17 @@ msgstr "Дата последнего капремонта"
 msgid "Operation time after major repair (hours)"
 msgstr "Наработка после капремонта (часов)"
 
-#: equipment/templates/equipment/eq_detail.html:55 equipment/views.py:18
-#: equipment/views.py:29 equipment/views.py:60
+#: equipment/templates/equipment/eq_detail.html:55 equipment/views.py:19
+#: equipment/views.py:30 equipment/views.py:67
 msgid "Update"
 msgstr "Изменить"
 
-#: equipment/templates/equipment/eq_detail.html:57 equipment/views.py:19
-#: equipment/views.py:30
+#: equipment/templates/equipment/eq_detail.html:57 equipment/views.py:20
+#: equipment/views.py:31
 msgid "Delete"
 msgstr "Удалить"
 
-#: equipment/templates/equipment/equipment.html:13 equipment/views.py:44
+#: equipment/templates/equipment/equipment.html:13 equipment/views.py:45
 msgid "Create equipment"
 msgstr "Создать оборудование"
 
@@ -141,38 +141,38 @@ msgstr "Тип объекта"
 msgid "Name"
 msgstr "Наименование"
 
-#: equipment/views.py:20
+#: equipment/views.py:21
 msgid "Show"
 msgstr "Показать"
 
-#: equipment/views.py:28
+#: equipment/views.py:29
 msgid "Equipment card"
 msgstr "Карточка оборудования"
 
-#: equipment/views.py:42
+#: equipment/views.py:43
 msgid "Equipment successfully created"
 msgstr "Оборудование успешно создано"
 
-#: equipment/views.py:45
+#: equipment/views.py:46
 msgid "Create"
 msgstr "Создать"
 
-#: equipment/views.py:57
+#: equipment/views.py:64
 msgid "Equipment successfully updated"
 msgstr "Оборудование успешно изменено"
 
-#: equipment/views.py:59
+#: equipment/views.py:66
 msgid "Update equipment"
 msgstr "Изменение оборудования"
 
-#: equipment/views.py:68
+#: equipment/views.py:75
 msgid "Equipment successfully deleted"
 msgstr "Оборудование успешно удалено"
 
-#: equipment/views.py:70
+#: equipment/views.py:77
 msgid "Delete equipment"
 msgstr "Удаление оборудования"
 
-#: equipment/views.py:71
+#: equipment/views.py:78
 msgid "Yes, delete"
 msgstr "Да, удалить"
