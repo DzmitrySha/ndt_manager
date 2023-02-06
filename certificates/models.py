@@ -9,27 +9,27 @@ from django.utils.translation import gettext_lazy as _
 class Certificate(models.Model):
     LEVEL_2 = _('2nd level')
     LEVEL_3 = _('3rd level')
-
-    LEVEL_CHOICES = [
-        (LEVEL_2, _('2nd level')),
-        (LEVEL_3, _('3rd level')),
-    ]
-
     VT = _('Visual testing method')
     UT = _('Ultrasonic testing method')
     PT = _('Penetrant testing method')
     MT = _('Magneting particle testing method')
 
+    LEVEL_CHOICES = [
+        (LEVEL_2, LEVEL_2),
+        (LEVEL_3, LEVEL_3),
+    ]
+
     METHOD_CHOICES = [
-        (VT, _('Visual testing method')),
-        (UT, _('Ultrasonic testing method')),
-        (PT, _('Penetrant testing method')),
-        (MT, _('Magneting particle testing method')),
+        (VT, VT),
+        (UT, UT),
+        (PT, PT),
+        (MT, MT),
     ]
 
     created_at = models.DateTimeField(verbose_name=_("Created date"),
                                       default=timezone.now)
-    number = models.CharField(max_length=32)
+    number = models.CharField(max_length=32,
+                              default='BY/112 09.01 080.01 00777')
     method = models.CharField(max_length=48,
                               choices=METHOD_CHOICES, default=VT,
                               verbose_name=_('Method'))
