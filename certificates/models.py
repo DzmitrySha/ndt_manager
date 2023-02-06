@@ -30,10 +30,10 @@ class Certificate(models.Model):
                                       default=timezone.now)
     number = models.CharField(max_length=32,
                               default='BY/112 09.01 080.01 00777')
-    method = models.CharField(max_length=48,
+    method = models.CharField(max_length=120,
                               choices=METHOD_CHOICES, default=VT,
                               verbose_name=_('Method'))
-    level = models.CharField(max_length=16,
+    level = models.CharField(max_length=120,
                              choices=LEVEL_CHOICES, default=LEVEL_2,
                              verbose_name=_('Level'))
     start_date = models.DateField(
