@@ -29,7 +29,6 @@ migrate:
 		$(LOCAL) migrate
 migrate-rw:
 		railway run python manage.py migrate
-		pgloader db.sqlite3 postgresql://postgres:6LGDDkAme42r1Ol2c0Wd@containers-us-west-188.railway.app:6064/railway
 
 # test commands
 test:
