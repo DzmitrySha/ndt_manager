@@ -31,9 +31,12 @@
         <td>{{ user.first_name }} {{ user.last_name }}</td>
         <td>{{ user.date_joined }}</td>
         <td>
-            <a href="/users/{{ user.pk }}/update/">{{ btn_update }}</a>
-            <br>
-            <a href="/users/{{ user.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/users/{{ user.pk }}/update/">
+                <button class="btn btn-info btn-lg" type="submit" value={{ btn_name }}>{{ btn_update }}
+            </button></a>
+            <a href="/users/{{ user.pk }}/delete/">
+                <button class="btn btn-danger btn-lg" type="submit" value={{ btn_name }}>{{ btn_delete }}
+            </button></a>
         </td>
     </tr>
     {% endfor %}
