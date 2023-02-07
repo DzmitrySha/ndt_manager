@@ -1,4 +1,5 @@
 LOCAL := poetry run python manage.py
+DATABASE_URL_PSQL := postgresql://postgres:...:railway
 
 install:
 		poetry install
@@ -29,6 +30,8 @@ migrate:
 		$(LOCAL) migrate
 migrate-rw:
 		railway run python manage.py migrate
+pgloader:
+		pgloader db.sqlite3 $(DATABASE_URL_PSQL)
 
 # test commands
 test:
