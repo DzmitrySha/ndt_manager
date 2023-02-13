@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-13 23:10+0300\n"
+"POT-Creation-Date: 2023-02-13 23:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,23 +36,23 @@ msgstr "Персонал"
 msgid "Certificates"
 msgstr "Сертификаты"
 
-#: ndt_manager/templates/base.html:61 ndt_manager/templates/base.html:64
+#: ndt_manager/templates/base.html:61 ndt_manager/templates/base.html:63
 msgid "Equipment"
 msgstr "Оборудование"
 
-#: ndt_manager/templates/base.html:63
+#: ndt_manager/templates/base.html:65
 msgid "Stations"
 msgstr "Станции"
 
-#: ndt_manager/templates/base.html:65
+#: ndt_manager/templates/base.html:66
 msgid "Equipment types"
 msgstr "Типы оборудования"
 
-#: ndt_manager/templates/base.html:72
+#: ndt_manager/templates/base.html:71
 msgid "Documents"
 msgstr "Документы"
 
-#: ndt_manager/templates/base.html:74
+#: ndt_manager/templates/base.html:73
 msgid "Reports"
 msgstr "Отчёты"
 
