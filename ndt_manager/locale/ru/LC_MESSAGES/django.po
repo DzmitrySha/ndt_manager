@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 22:12+0300\n"
+"POT-Creation-Date: 2023-02-13 23:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,48 +28,52 @@ msgstr "Менеджер ЛНКиТД"
 msgid "You are not logged in. Please log in."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
 
-#: ndt_manager/templates/base.html:52
-msgid "Users"
-msgstr "Пользователи"
+#: ndt_manager/templates/base.html:53 ndt_manager/templates/base.html:55
+msgid "Staff"
+msgstr "Персонал"
 
-#: ndt_manager/templates/base.html:55
+#: ndt_manager/templates/base.html:56
+msgid "Certificates"
+msgstr "Сертификаты"
+
+#: ndt_manager/templates/base.html:61 ndt_manager/templates/base.html:64
 msgid "Equipment"
 msgstr "Оборудование"
-
-#: ndt_manager/templates/base.html:58
-msgid "Reports"
-msgstr "Отчёты"
-
-#: ndt_manager/templates/base.html:61
-msgid "Parameters"
-msgstr "Параметры"
 
 #: ndt_manager/templates/base.html:63
 msgid "Stations"
 msgstr "Станции"
 
-#: ndt_manager/templates/base.html:64
+#: ndt_manager/templates/base.html:65
 msgid "Equipment types"
 msgstr "Типы оборудования"
 
-#: ndt_manager/templates/base.html:76 ndt_manager/templates/index.html:15
+#: ndt_manager/templates/base.html:72
+msgid "Documents"
+msgstr "Документы"
+
+#: ndt_manager/templates/base.html:74
+msgid "Reports"
+msgstr "Отчёты"
+
+#: ndt_manager/templates/base.html:86 ndt_manager/templates/index.html:15
 msgid "Logout"
 msgstr "Выйти"
 
-#: ndt_manager/templates/base.html:83 ndt_manager/templates/index.html:19
+#: ndt_manager/templates/base.html:93 ndt_manager/templates/index.html:19
 #: ndt_manager/views.py:21
 msgid "Login"
 msgstr "Войти"
 
-#: ndt_manager/templates/base.html:87 ndt_manager/templates/index.html:20
+#: ndt_manager/templates/base.html:97 ndt_manager/templates/index.html:20
 msgid "Registration"
 msgstr "Регистрация"
 
-#: ndt_manager/templates/base.html:111
+#: ndt_manager/templates/base.html:121
 msgid "This project on ReplIt"
 msgstr "Этот проект на GitHub"
 
-#: ndt_manager/templates/base.html:116
+#: ndt_manager/templates/base.html:126
 msgid "More projects"
 msgstr "Ещё проекты"
 
