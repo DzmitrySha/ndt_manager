@@ -2,17 +2,17 @@ from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic import (DetailView, CreateView,
-                                  UpdateView, DeleteView, ListView,
+                                  UpdateView, DeleteView
                                   )
 from django.utils.translation import gettext_lazy as _
 from equipment.models import Equipment
-# from django_filters.views import FilterView
-# from tasks.filters import TaskFilterForm
+from django_filters.views import FilterView
+from equipment.filters import EquipmentFilterForm
 
 
-class EquipmentList(ListView):
+class EquipmentList(FilterView):
     model = Equipment
-    # filterset_class = TaskFilterForm
+    filterset_class = EquipmentFilterForm
     template_name = "equipment/equipment.html"
     context_object_name = "equipment"
     extra_context = {'title': _('Equipment'),
@@ -49,7 +49,7 @@ class CreateEquipment(SuccessMessageMixin, CreateView):
     def get_form(self):
         form = super().get_form()
         form.fields["start_op_date"].widget = DatePickerInput()
-        form.fields["start_op_date"].widget = DatePickerInput()
+        form.fields["last_repair_date"].widget = DatePickerInput()
         return form
 
 
