@@ -9,9 +9,11 @@ class UserCreationFormCustom(UserCreationForm):
         super().__init__(*args, **kwargs)
         self.fields['first_name'].required = True
         self.fields['last_name'].required = True
+        self.fields['post'].required = False
         self.fields['first_name'].help_text = _("Enter user first name.")
         self.fields['last_name'].help_text = _("Enter user last name.")
+        self.fields['post'].help_text = _("Enter user post.")
 
     class Meta:
         model = get_user_model()
-        fields = ['username', 'first_name', 'last_name']
+        fields = ['username', 'first_name', 'last_name', 'post']

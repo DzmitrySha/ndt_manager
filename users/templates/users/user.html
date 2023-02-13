@@ -22,6 +22,10 @@
         <div class="col">{{ user.first_name }} {{ user.last_name }}</div>
       </div>
       <div class="row p-2">
+        <div class="col">{% trans 'Post' %}</div>
+        <div class="col">{{ user.post }}</div>
+      </div>
+      <div class="row p-2">
         <div class="col">{% trans 'Email' %}</div>
         <div class="col">{{ user.email }}</div>
       </div>
