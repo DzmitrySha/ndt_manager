@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 23:53+0300\n"
+"POT-Creation-Date: 2023-02-15 00:02+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,15 +24,15 @@ msgstr ""
 msgid "Users"
 msgstr "Пользователи"
 
-#: users/forms.py:13
+#: users/forms.py:12
 msgid "Enter user first name."
 msgstr "Введите Ваше имя"
 
-#: users/forms.py:14
+#: users/forms.py:13
 msgid "Enter user last name."
 msgstr "Введите Вашу фамилию"
 
-#: users/forms.py:15
+#: users/forms.py:25
 msgid "Enter user post."
 msgstr "Введите Вашу должность"
 
@@ -43,6 +43,11 @@ msgstr "У вас нет прав для изменения другого по�
 #: users/mixins.py:21
 msgid "You are not logged in. Please log in."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: users/models.py:7 users/templates/users/user.html:25
+#: users/templates/users/users.html:18
+msgid "Post"
+msgstr "Должность"
 
 #: users/templates/users/delete.html:14
 msgid "Are you sure want to delete"
@@ -55,10 +60,6 @@ msgstr "Пользователь"
 #: users/templates/users/user.html:21 users/templates/users/users.html:17
 msgid "Full name"
 msgstr "Полное имя"
-
-#: users/templates/users/user.html:25 users/templates/users/users.html:18
-msgid "Post"
-msgstr "Должность"
 
 #: users/templates/users/user.html:29
 msgid "Email"

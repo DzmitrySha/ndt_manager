@@ -10,7 +10,7 @@ from django.views.generic import (
     ListView, CreateView, UpdateView, DeleteView, DetailView
 )
 
-from users.forms import UserCreationFormCustom
+from users.forms import UserCreationFormCustom, UserUpdateFormCustom
 from ndt_manager.mixins import AppLoginRequiredMixin
 
 
@@ -47,7 +47,7 @@ class CreateUser(SuccessMessageMixin, CreateView):
 class UpdateUser(SuccessMessageMixin, UserPermissionsMixin,
                  AppLoginRequiredMixin, UpdateView):
     model = get_user_model()
-    form_class = UserCreationFormCustom
+    form_class = UserUpdateFormCustom
     success_url = reverse_lazy('users')
     success_message = _('User successfully updated')
     template_name = "users/form.html"
