@@ -12,6 +12,19 @@
 
 <a class="nav-link" href="{% url 'report_create' %}">{% trans 'Create report' %}</a>
 
+    <div class="card mb-3">
+    <div class="card-body bg-light">
+        <h3>{% trans 'Report search' %}</h3>
+        <form method="get" class="form-check">
+            {% bootstrap_form filter.form %}
+            <button submit="{{ btn_show }}" class="btn btn-info">
+                {{ btn_show }}
+            </button>
+        </form>
+    </div>
+    </div>
+
+
 <table class="table">
     <thead>
     <tr>

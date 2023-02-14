@@ -4,20 +4,24 @@ from django.contrib.messages.views import SuccessMessageMixin
 # from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import (ListView, CreateView, UpdateView, DeleteView)
+from django.views.generic import (CreateView, UpdateView, DeleteView)
+from django_filters.views import FilterView
 
+from reports.filters import ReportsFilterForm
 from reports.forms import ReportCreateForm
 from reports.models import Report
 from ndt_manager.mixins import AppLoginRequiredMixin
 
 
-class ReportsList(AppLoginRequiredMixin, ListView):
+class ReportsList(AppLoginRequiredMixin, FilterView):
     model = Report
+    filterset_class = ReportsFilterForm
     template_name = "reports/reports.html"
     context_object_name = "reports"
     extra_context = {'title': _('Reports'),
                      'btn_update': _('Update'),
                      'btn_delete': _('Delete'),
+                     'btn_show': _('Show'),
                      }
 
 
