@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-13 23:25+0300\n"
+"POT-Creation-Date: 2023-02-14 23:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,13 +24,17 @@ msgstr ""
 msgid "Users"
 msgstr "Пользователи"
 
-#: users/forms.py:12
+#: users/forms.py:13
 msgid "Enter user first name."
 msgstr "Введите Ваше имя"
 
-#: users/forms.py:13
+#: users/forms.py:14
 msgid "Enter user last name."
 msgstr "Введите Вашу фамилию"
+
+#: users/forms.py:15
+msgid "Enter user post."
+msgstr "Введите Вашу должность"
 
 #: users/mixins.py:16
 msgid "You don't have the rights to change another user."
@@ -52,34 +56,34 @@ msgstr "Пользователь"
 msgid "Full name"
 msgstr "Полное имя"
 
-#: users/templates/users/user.html:25
+#: users/templates/users/user.html:25 users/templates/users/users.html:18
+msgid "Post"
+msgstr "Должность"
+
+#: users/templates/users/user.html:29
 msgid "Email"
 msgstr "Адрес электронной почты"
 
-#: users/templates/users/user.html:29
+#: users/templates/users/user.html:33
 msgid "Date joined"
 msgstr "Дата регистрации"
 
-#: users/templates/users/user.html:33
+#: users/templates/users/user.html:37
 msgid "Last login"
 msgstr "Последний вход"
 
-#: users/templates/users/user.html:39 users/views.py:22 users/views.py:32
+#: users/templates/users/user.html:43 users/views.py:22 users/views.py:32
 #: users/views.py:55
 msgid "Update"
 msgstr "Изменить"
 
-#: users/templates/users/user.html:41 users/views.py:23 users/views.py:33
+#: users/templates/users/user.html:45 users/views.py:23 users/views.py:33
 msgid "Delete"
 msgstr "Удалить"
 
 #: users/templates/users/users.html:16
 msgid "User name"
 msgstr "Имя пользователя"
-
-#: users/templates/users/users.html:18
-msgid "Post"
-msgstr "Должность"
 
 #: users/templates/users/users.html:19
 msgid "Created date"

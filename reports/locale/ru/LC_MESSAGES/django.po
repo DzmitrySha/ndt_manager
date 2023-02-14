@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-06 22:30+0300\n"
+"POT-Creation-Date: 2023-02-14 23:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: reports/apps.py:8 reports/views.py:18
+#: reports/apps.py:8 reports/views.py:21
 msgid "Reports"
 msgstr "Отчёты"
 
-#: reports/forms.py:13 reports/templates/reports/reports.html:24
+#: reports/forms.py:13 reports/templates/reports/reports.html:37
 msgid "Station"
 msgstr "Станция"
 
@@ -48,15 +48,15 @@ msgstr "Дата создания"
 msgid "Updated date"
 msgstr "Дата изменения"
 
-#: reports/models.py:24 reports/templates/reports/reports.html:19
+#: reports/models.py:24 reports/templates/reports/reports.html:32
 msgid "Report number"
 msgstr "Номер отчёта"
 
-#: reports/models.py:25 reports/templates/reports/reports.html:20
+#: reports/models.py:25 reports/templates/reports/reports.html:33
 msgid "Report date"
 msgstr "Дата отчёта"
 
-#: reports/models.py:29 reports/templates/reports/reports.html:21
+#: reports/models.py:29 reports/templates/reports/reports.html:34
 msgid "Report type"
 msgstr "Тип отчёта"
 
@@ -72,54 +72,62 @@ msgstr "Описание"
 msgid "Are you sure want to delete"
 msgstr "Вы уверены, что хотите удалить"
 
-#: reports/templates/reports/reports.html:13 reports/views.py:30
+#: reports/templates/reports/reports.html:13 reports/views.py:34
 msgid "Create report"
 msgstr "Создать отчёт"
 
-#: reports/templates/reports/reports.html:22
+#: reports/templates/reports/reports.html:17
+msgid "Report search"
+msgstr "Найти отчёт"
+
+#: reports/templates/reports/reports.html:35
 msgid "Equipment type"
 msgstr "Тип оборудования"
 
-#: reports/templates/reports/reports.html:23
+#: reports/templates/reports/reports.html:36
 msgid "Equipment name"
 msgstr "Наименование оборудования"
 
-#: reports/templates/reports/reports.html:37
+#: reports/templates/reports/reports.html:50
 msgid "st.№"
 msgstr "ст.№"
 
-#: reports/views.py:19 reports/views.py:47
+#: reports/views.py:22 reports/views.py:51
 msgid "Update"
 msgstr "Изменить"
 
-#: reports/views.py:20
+#: reports/views.py:23
 msgid "Delete"
 msgstr "Удалить"
 
-#: reports/views.py:28
+#: reports/views.py:24
+msgid "Show"
+msgstr "Показать"
+
+#: reports/views.py:32
 msgid "Report successfully created"
 msgstr "Отчёт успешно создан"
 
-#: reports/views.py:31
+#: reports/views.py:35
 msgid "Create"
 msgstr "Создать"
 
-#: reports/views.py:44
+#: reports/views.py:48
 msgid "Report successfully updated"
 msgstr "Отчёт успешно изменён"
 
-#: reports/views.py:46
+#: reports/views.py:50
 msgid "Update report"
 msgstr "Изменение отчёта"
 
-#: reports/views.py:55
+#: reports/views.py:59
 msgid "Report successfully deleted"
 msgstr "Отчёт успешно удалён"
 
-#: reports/views.py:57
+#: reports/views.py:61
 msgid "Delete report"
 msgstr "Удаление отчёта"
 
-#: reports/views.py:58
+#: reports/views.py:62
 msgid "Yes, delete"
 msgstr "Да, удалить"
