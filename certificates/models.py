@@ -28,7 +28,7 @@ class Certificate(models.Model):
 
     created_at = models.DateTimeField(verbose_name=_("Created date"),
                                       default=timezone.now)
-    number = models.CharField(max_length=32,
+    number = models.CharField(max_length=32, verbose_name=_('Number'),
                               default='BY/112 09.01 080.01 00777')
     method = models.CharField(max_length=120,
                               choices=METHOD_CHOICES, default=VT,
@@ -42,7 +42,7 @@ class Certificate(models.Model):
         verbose_name=_('Finish date'),
         default=timezone.now)
     owner = models.ForeignKey(to='users.User', on_delete=models.PROTECT,
-                              blank=False)
+                              blank=False, verbose_name=_('Owner'))
 
     def __str__(self):
         return f"{self.number} {_('from')} {self.start_date}"

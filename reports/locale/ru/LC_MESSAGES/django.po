@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 23:53+0300\n"
+"POT-Creation-Date: 2023-02-19 00:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,12 @@ msgstr ""
 msgid "Reports"
 msgstr "Отчёты"
 
-#: reports/forms.py:13 reports/templates/reports/reports.html:37
+#: reports/forms.py:13 reports/models.py:32
+#: reports/templates/reports/reports.html:37
 msgid "Station"
 msgstr "Станция"
 
-#: reports/forms.py:18 reports/models.py:32
+#: reports/forms.py:18 reports/models.py:35
 msgid "Equipment"
 msgstr "Оборудование"
 
@@ -60,11 +61,11 @@ msgstr "Дата отчёта"
 msgid "Report type"
 msgstr "Тип отчёта"
 
-#: reports/models.py:34
+#: reports/models.py:37
 msgid "Parts names"
 msgstr "Элементы оборудования"
 
-#: reports/models.py:35
+#: reports/models.py:38
 msgid "Description"
 msgstr "Описание"
 

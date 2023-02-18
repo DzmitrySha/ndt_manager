@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-06 22:30+0300\n"
+"POT-Creation-Date: 2023-02-19 00:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
 #: certificates/models.py:10
 msgid "2nd level"
 msgstr "2-й уровень"
@@ -47,6 +48,11 @@ msgstr "Магнитопорошковый метод"
 msgid "Created date"
 msgstr "Дата создания"
 
+#: certificates/models.py:31
+#: certificates/templates/certificates/certificates.html:20
+msgid "Number"
+msgstr "Номер"
+
 #: certificates/models.py:35
 #: certificates/templates/certificates/certificates.html:21
 msgid "Method"
@@ -67,18 +73,15 @@ msgstr "Дата выдачи"
 msgid "Finish date"
 msgstr "Дата окончания"
 
-#: certificates/templates/certificates/certificates.html:13
-#: certificates/views.py:29
-msgid "Create certificate"
-msgstr "Создать сертификат"
-
+#: certificates/models.py:45
 #: certificates/templates/certificates/certificates.html:19
 msgid "Owner"
 msgstr "Владелец"
 
-#: certificates/templates/certificates/certificates.html:20
-msgid "Number"
-msgstr "Номер"
+#: certificates/templates/certificates/certificates.html:13
+#: certificates/views.py:29
+msgid "Create certificate"
+msgstr "Создать сертификат"
 
 #: certificates/templates/certificates/delete.html:14
 msgid "Are you sure want to delete certificate"
@@ -123,3 +126,7 @@ msgstr "Удаление сертификата"
 #: certificates/views.py:59
 msgid "Yes, delete"
 msgstr "Да, удалить"
+
+#: certificates/models.py:38
+msgid "from"
+msgstr "от"
