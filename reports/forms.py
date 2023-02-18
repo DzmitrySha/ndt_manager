@@ -1,6 +1,6 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
-from django_select2 import forms as s2forms
+# from django_select2 import forms as s2forms
 from reports.models import Report
 from stations.models import Station
 from equipment.models import Equipment

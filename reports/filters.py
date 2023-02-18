@@ -1,7 +1,7 @@
 import django_filters
 from reports.models import Report
-from stations.models import Station
-from equipment.models import Equipment
+# from stations.models import Station
+# from equipment.models import Equipment
 
 
 class ReportsFilterForm(django_filters.FilterSet):
