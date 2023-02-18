@@ -28,9 +28,12 @@
         <td>{{ equiptype.name }}</td>
         <td>{{ equiptype.created_at }}</td>
         <td>
-            <a href="/equiptypes/{{ equiptype.pk }}/update/">{{ btn_update }}</a>
-            <br>
-            <a href="/equiptypes/{{ equiptype.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/equiptypes/{{ equiptype.pk }}/update/">
+                <button class="btn btn-info" type="submit" value={{ btn_name }}>{{ btn_update }}
+            </button></a>
+            <a href="/equiptypes/{{ equiptype.pk }}/delete/">
+                <button class="btn btn-danger" type="submit" value={{ btn_name }}>{{ btn_delete }}
+            </button></a>
         </td>
     </tr>
     {% endfor %}

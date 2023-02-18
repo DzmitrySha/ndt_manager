@@ -28,9 +28,12 @@
         <td>{{ station.name }}</td>
         <td>{{ station.address }}</td>
         <td>
-            <a href="/stations/{{ station.pk }}/update/">{{ btn_update }}</a>
-            <br>
-            <a href="/stations/{{ station.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/stations/{{ station.pk }}/update/">
+                <button class="btn btn-info" type="submit" value={{ btn_name }}>{{ btn_update }}
+            </button></a>
+            <a href="/stations/{{ station.pk }}/delete/">
+                <button class="btn btn-danger" type="submit" value={{ btn_name }}>{{ btn_delete }}
+            </button></a>
         </td>
     </tr>
     {% endfor %}

@@ -50,9 +50,12 @@
         <td>{{ report.equipment.name }}, {% trans 'st.№' %}{{ report.equipment.station_num }}</td>
         <td>{{ report.equipment.station }}</td>
         <td>
-            <a href="/reports/{{ report.pk }}/update/">{{ btn_update }}</a>
-            <br>
-            <a href="/reports/{{ report.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/reports/{{ report.pk }}/update/">
+                <button class="btn btn-info" type="submit" value={{ btn_name }}>{{ btn_update }}
+            </button></a>
+            <a href="/reports/{{ report.pk }}/delete/">
+                <button class="btn btn-danger" type="submit" value={{ btn_name }}>{{ btn_delete }}
+            </button></a>
         </td>
     </tr>
     {% endfor %}

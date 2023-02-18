@@ -50,9 +50,12 @@
         <td>{{ eq.register_num }}</td>
         <td>{{ eq.op_time }}</td>
         <td>
-            <a href="/equipment/{{ eq.pk }}/update/">{{ btn_update }}</a>
-            <br>
-            <a href="/equipment/{{ eq.pk }}/delete/">{{ btn_delete }}</a>
+            <a href="/equipment/{{ eq.pk }}/update/">
+                <button class="btn btn-info" type="submit" value={{ btn_name }}>{{ btn_update }}
+            </button></a>
+            <a href="/equipment/{{ eq.pk }}/delete/">
+                <button class="btn btn-danger" type="submit" value={{ btn_name }}>{{ btn_delete }}
+            </button></a>
         </td>
     </tr>
     {% endfor %}
