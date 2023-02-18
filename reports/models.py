@@ -27,6 +27,9 @@ class Report(models.Model):
     report_type = models.CharField(max_length=12, choices=REPORT_TYPE_CHOICES,
                                    default=NDT_REPORT,
                                    verbose_name=_('Report type'))
+    station = models.ForeignKey(
+        to='stations.Station', on_delete=models.PROTECT, blank=False,
+        verbose_name=_('Station'))
     equipment = models.ForeignKey(
         to='equipment.Equipment', on_delete=models.PROTECT, blank=False,
         related_name='equipment', verbose_name=_('Equipment'))

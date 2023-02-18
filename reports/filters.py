@@ -1,6 +1,7 @@
 import django_filters
 from reports.models import Report
-# from stations.models import Station
+from stations.models import Station
+from equipment.models import Equipment
 
 
 class ReportsFilterForm(django_filters.FilterSet):
@@ -11,4 +12,4 @@ class ReportsFilterForm(django_filters.FilterSet):
     class Meta:
         model = Report
         fields = ['report_num', 'report_date', 'report_type',
-                  'equipment']
+                  'station', 'equipment']

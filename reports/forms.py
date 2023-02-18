@@ -16,11 +16,11 @@ class ReportCreateForm(forms.ModelForm):
     equipment = forms.ModelChoiceField(
         queryset=Equipment.objects.all(),
         label=_("Equipment"),
-        widget=s2forms.ModelSelect2Widget(
-            queryset=Equipment.objects.all(),
-            search_fields=['name__icontains'],
-            dependent_fields={'station': 'station'},
-        )
+        # widget=s2forms.ModelSelect2Widget(
+        #     queryset=Equipment.objects.all(),
+        #     search_fields=['name__icontains'],
+        #     dependent_fields={'station': 'station'},
+        # )
     )
 
     class Meta:
