@@ -38,7 +38,9 @@ class Report(models.Model):
 
     description = models.TextField(verbose_name=_('Description'), blank=True)
 
-    file = models.FileField(upload_to='reports/uploads/%Y-%m-%d/', blank=True)
+    file = models.FileField(upload_to='reports/uploads/%Y-%m-%d/',
+                            verbose_name=_('Report file'),
+                            blank=True)
 
     def __str__(self):
         return f"""{_('Report')} {self.report_num} at {self.report_date}
