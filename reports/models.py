@@ -27,15 +27,18 @@ class Report(models.Model):
     report_type = models.CharField(max_length=12, choices=REPORT_TYPE_CHOICES,
                                    default=NDT_REPORT,
                                    verbose_name=_('Report type'))
-    station = models.ForeignKey(
-        to='stations.Station', on_delete=models.PROTECT, blank=False,
-        verbose_name=_('Station'))
+    station = models.ForeignKey(to='stations.Station', on_delete=models.PROTECT,
+                                verbose_name=_('Station'))
     equipment = models.ForeignKey(
-        to='equipment.Equipment', on_delete=models.PROTECT, blank=False,
+        to='equipment.Equipment', on_delete=models.PROTECT,
         related_name='equipment', verbose_name=_('Equipment'))
+
     parts_names = models.CharField(max_length=120, blank=True,
                                    verbose_name=_('Parts names'))
+
     description = models.TextField(verbose_name=_('Description'), blank=True)
+
+    file = models.FileField(upload_to='reports/uploads/%Y-%m-%d/', blank=True)
 
     def __str__(self):
         return f"""{_('Report')} {self.report_num} at {self.report_date}

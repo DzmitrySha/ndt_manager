@@ -26,4 +26,4 @@ class ReportCreateForm(forms.ModelForm):
     class Meta:
         model = Report
         fields = ['report_num', 'report_date', 'report_type', 'station',
-                  'equipment', 'parts_names', 'description']
+                  'equipment', 'parts_names', 'file', 'description']
