@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-19 00:01+0300\n"
+"POT-Creation-Date: 2023-02-21 23:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "Reports"
 msgstr "Отчёты"
 
-#: reports/forms.py:13 reports/models.py:32
+#: reports/forms.py:13 reports/models.py:31
 #: reports/templates/reports/reports.html:37
 msgid "Station"
 msgstr "Станция"
 
-#: reports/forms.py:18 reports/models.py:35
+#: reports/forms.py:18 reports/models.py:34
 msgid "Equipment"
 msgstr "Оборудование"
 
@@ -65,9 +65,13 @@ msgstr "Тип отчёта"
 msgid "Parts names"
 msgstr "Элементы оборудования"
 
-#: reports/models.py:38
+#: reports/models.py:39
 msgid "Description"
 msgstr "Описание"
+
+#: reports/models.py:42 reports/templates/reports/reports.html:38
+msgid "Report file"
+msgstr "Файл отчёта"
 
 #: reports/templates/reports/delete.html:14
 msgid "Are you sure want to delete"
@@ -89,9 +93,13 @@ msgstr "Тип оборудования"
 msgid "Equipment name"
 msgstr "Наименование оборудования"
 
-#: reports/templates/reports/reports.html:50
+#: reports/templates/reports/reports.html:57
 msgid "st.№"
 msgstr "ст.№"
+
+#: reports/templates/reports/reports.html:61
+msgid "YES"
+msgstr "ДА"
 
 #: reports/views.py:22 reports/views.py:51
 msgid "Update"
