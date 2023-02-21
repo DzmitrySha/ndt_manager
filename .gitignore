@@ -5,6 +5,7 @@ dist/
 __pycache__
 .pytest_cache/
 static/
+media/
 var/
 x/
 .config
