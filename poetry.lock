@@ -357,6 +357,18 @@ beautifulsoup4 = ">=4.8.0"
 Django = ">=3.2"
 
 [[package]]
+name = "django-cleanup"
+version = "7.0.0"
+description = "Deletes old files."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-cleanup-7.0.0.tar.gz", hash = "sha256:28a969f889c661eba0d9438978693980f09482c97983bd08ee52955dae8d71e4"},
+    {file = "django_cleanup-7.0.0-py2.py3-none-any.whl", hash = "sha256:f50d54de48527d66ff05d74d2c3aafcdadc6c94ba280ece14a7e4c5b2c591447"},
+]
+
+[[package]]
 name = "django-extensions"
 version = "3.2.1"
 description = "Extensions for Django"
@@ -921,4 +933,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "a06b164b7efcf2e99d5af7ab6f9c2da112500a04b89c0a60f85cad018a801144"
+content-hash = "4c117383ff48ae92e3c4da66bb45f778872125ca0dfdbf8377b135a796bdeab1"
