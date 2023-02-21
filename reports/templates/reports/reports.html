@@ -35,6 +35,7 @@
         <th scope="col">{% trans 'Equipment type' %}</th>
         <th scope="col">{% trans 'Equipment name' %}</th>
         <th scope="col">{% trans 'Station' %}</th>
+        <th scope="col">{% trans 'Report file' %}</th>
 
         <th scope="col"></th>
     </tr>
@@ -43,12 +44,23 @@
     {% for report in reports %}
     <tr>
         <th scope="row">{{ report.pk }}</th>
-        <td>{{ report.report_num }}</td>
+        <td>
+            {% if report.file %}
+                <a href="{{ report.file.url }}">{{ report.report_num }}</a>
+            {% else %}
+                {{ report.report_num }}
+            {% endif %}
+        </td>
         <td>{{ report.report_date }}</td>
         <td>{{ report.report_type }}</td>
         <td>{{ report.equipment.equipment_type }} </td>
         <td>{{ report.equipment.name }}, {% trans 'st.№' %}{{ report.equipment.station_num }}</td>
         <td>{{ report.equipment.station }}</td>
+        <td>
+            {% if report.file %}
+                <a href="{{ report.file.url }}">{% trans 'YES' %}</a>
+            {% endif %}
+        </td>
         <td>
             <a href="/reports/{{ report.pk }}/update/">
                 <button class="btn btn-info" type="submit" value={{ btn_name }}>{{ btn_update }}
